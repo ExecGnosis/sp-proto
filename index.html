@@ -44,6 +44,74 @@
                   <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
                   <span>@loise.lobo</span>
                 </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="img/instagram_profile/2.jpg" width="48" alt="Social Pump Logo">
+                  <span>@loise.lobo</span>
+                </a>
               </div>
             </div>
           </li>
@@ -154,16 +222,18 @@
               <form>
                 <div class="form-group">
                   <label for="new-email">Usuário</label>
-                  <input type="email" class="form-control" id="new-email" aria-describedby="emailHelp" placeholder="Conta do Instagram">
+                  <input type="text" class="form-control" id="new-email" placeholder="Conta do Instagram">
                 </div>
                 <div class="form-group">
                   <label for="new-password">Senha</label>
                   <input type="password" class="form-control" id="new-password" placeholder="Senha da conta">
                 </div>
               </form>
-              <button class="submit-new-account" type="submit" name="button">
+
+              <button class="submit-new-account disabled" type="submit" name="button">
                 Adicionar Conta
               </button>
+
             </div>
           </div>
         </div>
@@ -426,6 +496,20 @@
         // Habilita adição de contas
         $('#new-account-info').hide(); // Por ele ser uma flex-box
         $('#new-account').addAccount('#new-account-info');
+
+        $('#new-email').keyup( (ev) => {
+          if($('#new-email').val().length && $('#new-password').val().length)
+            $('#new-account .submit-new-account.disabled').removeClass('disabled').addClass('default');
+          else
+            $('#new-account-info .submit-new-account.default').removeClass('default').addClass('disabled');
+        });
+        $('#new-password').keyup( (ev) => {
+          if($('#new-email').val().length && $('#new-password').val().length)
+            $('#new-account-info .submit-new-account.disabled').removeClass('disabled').addClass('default');
+          else
+            $('#new-account-info .submit-new-account.default').removeClass('default').addClass('disabled');
+        });
+
       });
 
       $(document).mouseup( (ev) => {

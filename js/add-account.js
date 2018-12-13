@@ -15,10 +15,12 @@ if( 'jQuery' in window ) {
         // Submit button
 
         $(target).find('.submit-new-account').click( (ev)=>{
-          $(target).fadeOut('normal', function() {
-            $(obj).parent().css("cssText", "");
-            $(obj).fadeIn('normal');
-          });;
+
+          console.log($(target).parent().hasClass('was-validated'));
+          // $(target).fadeOut('normal', function() {
+          //   $(obj).parent().css("cssText", "");
+          //   $(obj).fadeIn('normal');
+          // });
         });
 
         // Animation
