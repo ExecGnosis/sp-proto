@@ -4,12 +4,24 @@ if( 'jQuery' in window ) {
 
     jQuery.fn.addAccount = function(target) {
       return this.each((index,obj)=>{
+        // Cancel button
         $(target).find('.close-card').click( (ev)=>{
           $(target).fadeOut('normal', function() {
             $(obj).parent().css("cssText", "");
             $(obj).fadeIn('normal');
           });
         });
+
+        // Submit button
+
+        $(target).find('.submit-new-account').click( (ev)=>{
+          $(target).fadeOut('normal', function() {
+            $(obj).parent().css("cssText", "");
+            $(obj).fadeIn('normal');
+          });;
+        });
+
+        // Animation
 
         $(obj).click( (ev)=>{
           $(ev.currentTarget).fadeOut('normal', function() {
