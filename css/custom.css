@@ -1,0 +1,281 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FAFAFA;
+}
+
+/* Primary Nav */
+
+nav#main{
+  background-color: #F6F6F6;
+  margin-bottom: 50px;
+}
+
+nav#main a:hover {
+  /* background-color: #ccc; */
+}
+
+nav#main .navbar-collapse {
+  width: 275px;
+  flex-grow: 0;
+}
+
+
+nav#main .profile {
+  outline: 0;
+}
+
+nav#main .profile button {
+  width: 275px;
+  background-color: #E7E7E7;
+  border-radius: 0;
+  font-size: 1em;
+}
+
+nav#main .profile button img {
+  margin-right: 5px;
+}
+
+nav#main .profile button:focus {
+  box-shadow: none;
+}
+
+nav#main .profile img {
+  border-radius: 100%;
+}
+
+nav#main .profile .dropdown-menu{
+  width: 275px;
+}
+
+nav#main .profile span{
+  display: inline-block;
+  width: 150px;
+  vertical-align: middle;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+nav#main .profile .dropdown-toggle::after {
+  border: 0;
+  margin: 0;
+  vertical-align: 0;
+
+  content: '';
+	display: inline-block;
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #9DA3A8;
+  border-right: 2px solid #9DA3A8;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+nav#main .profile .dropdown-item:hover {
+  background-color: #E7E7E7;
+}
+
+nav#main .profile .dropdown-item:active {
+  color: #212529;
+  /* background-color: #999; */
+}
+
+/* Secondary Nav */
+
+nav#actions {
+  background-color: #D5D5D5;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+nav#actions .row {
+  width: 100%;
+  margin: 0;
+}
+
+nav#actions .row .col {
+  padding-top: 1em;
+  text-align: center;
+  border-bottom: 3px solid #969DB2;
+}
+
+nav#actions .row .col p{
+  margin: 0;
+  padding: 0;
+}
+
+nav#actions .row .col.active {
+  background-color: #969DB2;
+}
+
+nav#actions .row .col:hover:not(.active) {
+  cursor: pointer;
+  background-color: #bbb
+}
+
+
+
+/* Page Content */
+
+section#content {
+  background-color: #F2F2F2;
+  min-height: 60vh;
+  padding: 2.5em 3.5em;
+  margin-bottom: 50px;
+}
+
+section#content mark {
+  background-color: transparent;
+  color: #424242;
+  font-weight: bold;
+}
+
+section#content .account, section#content .new-account {
+  margin-top: 3em;
+}
+
+section#content .card {
+  color: #454545;
+
+  min-height: 275px;
+
+  border: 0;
+  border-radius: 0;
+
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+section#content .card .card-footer {
+  padding: 0;
+}
+
+section#content .card .card-footer button{
+  padding: .75rem 1.25rem;
+
+  outline: 0;
+  border: 0;
+  margin: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transition: background-color 0.2s ease;
+
+  background-color: transparent;
+}
+
+section#content .card .card-footer button:hover {
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+section#content .new-account .card.add-button {
+  background-color: transparent;
+  box-shadow: none;
+  color: #9DA3A8;
+}
+
+section#content .new-account .card.add-button .wrapper {
+  cursor: pointer;
+  user-select: none;
+}
+
+section#content .new-account .card.add-button .wrapper #svg_add{
+  transition: all ease 0.2s;
+}
+
+section#content .new-account .card.add-button .wrapper:hover #svg_add{
+  /* fill: #67696b !important; */
+  transform-origin: center;
+  transform: scale(1.1);
+}
+
+section#content .new-account .card.add-button svg {
+  display: block;
+  margin-bottom: 1em;
+}
+
+section#content .new-account .card.account-info {
+  /* display: none; */
+}
+
+section#content .new-account .card.account-info form label  {
+  font-size: .8em;
+  color: #9D9A9A;
+  text-align: left;
+}
+
+section#content .account .card-header {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+section#content .account .card-title {
+  margin-bottom: 0.5em;
+}
+
+section#content .account .card-title span {
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+section#content .account .card-title img {
+  border-radius: 100%;
+  margin-bottom: 0.5em;
+}
+
+section#content .account .card .dropdown-menu {
+  width: 100px;
+  min-width: 100px;
+  top: 32px;
+  left: 100%;
+  margin-left: -110px;
+}
+
+section#content .account .card .card-text {
+  color: #9D9A9A;
+  font-size: .8em;
+}
+
+/* Animação dos dropdowns*/
+
+.dropdown-menu {
+  display: block;
+
+  border: 0;
+  opacity: 0;
+  border-radius: 0;
+  visibility: hidden;
+
+  transition: all ease 0.2s;
+
+  box-shadow: 2px 2px 6px 0 #e9ebee;
+
+  transform: translateY(-10px) rotateX(10deg);
+  -o-transform: translateY(-10px) rotateX(10deg);
+  -webkit-transform: translateY(-10px) rotateX(10deg);
+  -moz-transform: translateY(-10px) rotateX(10deg);
+  -ms-transform: translateY(-10px) rotateX(10deg);
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px) rotateX(0deg);
+}
+
+.dropdown-item:hover {
+  background-color: #E7E7E7;
+}
+
+.dropdown-item:active {
+  color: #212529;
+}
