@@ -135,6 +135,10 @@ section#content .account, section#content .new-account {
   margin-top: 3em;
 }
 
+section#content .col-lg-3 {
+  transition: ease 0.2s all;
+}
+
 section#content .card {
   color: #454545;
 
@@ -183,17 +187,17 @@ section#content .new-account .card.add-button .wrapper {
   user-select: none;
 }
 
-section#content .new-account .card.add-button .wrapper #svg_add{
+section#content .new-account .card.add-button .wrapper #add_account{
   transition: all ease 0.2s;
 }
 
-section#content .new-account .card.add-button .wrapper:hover #svg_add{
+section#content .new-account .card.add-button .wrapper:hover #add_account{
   /* fill: #67696b !important; */
   transform-origin: center;
   transform: scale(1.1);
 }
 
-section#content .new-account .card.add-button svg {
+section#content .new-account .card.add-button img {
   display: block;
   margin-bottom: 1em;
 }
@@ -206,6 +210,20 @@ section#content .new-account .card.account-info form label  {
   font-size: .8em;
   color: #9D9A9A;
   text-align: left;
+}
+
+section#content .new-account .card-header {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+section#content .new-account .card-header .close-card path {
+  transition: fill ease 0.5s;
+}
+
+section#content .new-account .card-header .close-card:hover path {
+  fill: #b60000;
 }
 
 section#content .account .card-header {

@@ -4,13 +4,18 @@ if( 'jQuery' in window ) {
 
     jQuery.fn.addAccount = function(target) {
       return this.each((index,obj)=>{
+        $(target).find('.close-card').click( (ev)=>{
+          $(target).fadeOut('normal', function() {
+            $(obj).parent().css("cssText", "");
+            $(obj).fadeIn('normal');
+          });
+        });
+
         $(obj).click( (ev)=>{
           $(ev.currentTarget).fadeOut('normal', function() {
-            $(ev.currentTarget).parent().css("cssText", "display: none !important;");
+            $(ev.currentTarget).parent().css("cssText", "display: none !important");
 
-            $(target).fadeIn('normal', (ev)=>{
-              $(target).css("cssText", "display: flex !important;");
-            });
+            $(target).fadeIn('normal');
 
           });
         });
