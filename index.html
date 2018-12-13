@@ -134,7 +134,7 @@
       </div>
 
     </nav>
-    <nav id="actions" class="navbar navbar-expand-lg navbar-light container">
+    <nav id="actions" class="navbar navbar-expand-lg sticky-top container">
       <div class="row justify-content-center">
         <div class="col active">
           <img src="img/icons/users.svg" width="48" alt="Contas">
@@ -499,10 +499,11 @@
 
         $('#new-email').keyup( (ev) => {
           if($('#new-email').val().length && $('#new-password').val().length)
-            $('#new-account .submit-new-account.disabled').removeClass('disabled').addClass('default');
+            $('#new-account-info .submit-new-account.disabled').removeClass('disabled').addClass('default');
           else
             $('#new-account-info .submit-new-account.default').removeClass('default').addClass('disabled');
         });
+
         $('#new-password').keyup( (ev) => {
           if($('#new-email').val().length && $('#new-password').val().length)
             $('#new-account-info .submit-new-account.disabled').removeClass('disabled').addClass('default');

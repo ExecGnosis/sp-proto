@@ -111,7 +111,7 @@ nav#actions .row .col.active {
 
 nav#actions .row .col:hover:not(.active) {
   cursor: pointer;
-  background-color: #bbb
+  background-color: #ccc
 }
 
 /* Page Content */
@@ -315,8 +315,38 @@ section#content .account .card .card-text {
 
 /* Animação dos dropdowns*/
 
+.dropdown-menu::-webkit-scrollbar-button {
+    display: none;
+    height: 13px;
+    border-radius: 0px;
+    background-color: #AAA;
+}
+
+.dropdown-menu::-webkit-scrollbar-button:hover {
+    background-color: #AAA;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #b4b4b4;
+    border-radius: 5px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background-color: #8c8c8c;
+    border-radius: 5px;
+}
+.dropdown-menu::-webkit-scrollbar-track, .dropdown-menu::-webkit-scrollbar-track:hover{
+  background-color: transparent;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
 .dropdown-menu {
   display: block;
+
+  max-height: 600px;
+  overflow-y: auto;
 
   border: 0;
   opacity: 0;
@@ -334,6 +364,7 @@ section#content .account .card .card-text {
   -webkit-transform: translateY(-10px) rotateX(10deg);
   -moz-transform: translateY(-10px) rotateX(10deg);
   -ms-transform: translateY(-10px) rotateX(10deg);
+
 }
 
 .dropdown-menu.active {
