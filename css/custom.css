@@ -303,7 +303,7 @@ section#content .account .card-title img {
 section#content .account .card .dropdown-menu {
   width: 100px;
   min-width: 100px;
-  top: 32px;
+  top: 36px;
   left: 100%;
   margin-left: -110px;
 }
@@ -313,7 +313,54 @@ section#content .account .card .card-text {
   font-size: .8em;
 }
 
+section#content .custom-dropdown img.delete-icon {
+  visibility: hidden;
+  opacity: 0;
+
+  margin-right: -16px;
+  margin-top: -32px;
+
+  transition: 0.2s ease all;
+}
+
+section#content .card:hover .custom-dropdown img.delete-icon {
+  cursor: pointer;
+
+  visibility: visible;
+  opacity: 1;
+
+  margin-right: -16px;
+  margin-top: -32px;
+}
+
 /* Animação dos dropdowns*/
+
+.dropdown-menu {
+  display: block;
+
+  z-index:9999;
+
+  max-height: 600px;
+  overflow-y: auto;
+
+  border: 0;
+  opacity: 0;
+  border-radius: 0;
+  visibility: hidden;
+
+  transition: all ease 0.2s;
+
+  box-shadow: 2px 2px 6px 0 #e9ebee;
+
+  will-change: opacity, transform;
+
+  transform: translateY(-10px) rotateX(10deg);
+  -o-transform: translateY(-10px) rotateX(10deg);
+  -webkit-transform: translateY(-10px) rotateX(10deg);
+  -moz-transform: translateY(-10px) rotateX(10deg);
+  -ms-transform: translateY(-10px) rotateX(10deg);
+
+}
 
 .dropdown-menu::-webkit-scrollbar-button {
     display: none;
@@ -340,31 +387,6 @@ section#content .account .card .card-text {
 
 .dropdown-menu::-webkit-scrollbar {
     width: 8px;
-}
-
-.dropdown-menu {
-  display: block;
-
-  max-height: 600px;
-  overflow-y: auto;
-
-  border: 0;
-  opacity: 0;
-  border-radius: 0;
-  visibility: hidden;
-
-  transition: all ease 0.2s;
-
-  box-shadow: 2px 2px 6px 0 #e9ebee;
-
-  will-change: opacity, transform;
-
-  transform: translateY(-10px) rotateX(10deg);
-  -o-transform: translateY(-10px) rotateX(10deg);
-  -webkit-transform: translateY(-10px) rotateX(10deg);
-  -moz-transform: translateY(-10px) rotateX(10deg);
-  -ms-transform: translateY(-10px) rotateX(10deg);
-
 }
 
 .dropdown-menu.active {
